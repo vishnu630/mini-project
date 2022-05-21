@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/*google fonts*/
+
+::selection {
+  background-color: #353F48;
+   color: tomato;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #353F48;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+h1, h2 {line-height: 1.2;}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: tomato;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*ends base*/
+
+.container {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 2px solid tomato;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;  
+  background-color: transparent;
+  font-weight: 600;
+  color: tomato;
+  transition-duration: .3s;
+  transition-property: border, background, color;
+}
+
+.btn:hover {
+  border: 2px solid #353F48;
+  color: #353F48;
+}
+
+.btn-full {
+  border: 2px solid tomato;
+  background-color: tomato;
+  color: #ededed;
+}
+
+.btn-full:hover {
+  border: 2px solid tomato;
+  background-color: transparent;
+  color: tomato;
+}
+
+/*ends basic*/
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 30px 0;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+header .container {
+  width: 1600px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: tomato;
+  cursor: pointer;
+}
+
+header .logo h2 span {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background-color: #353F48;
+  margin-right: 3px;
+  transition: .3s;
+}
+
+header .logo h2:hover span {
+  background-color: tomato;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header nav ul {list-style: none;}
+
+header nav ul li {display: inline-block;}
+
+header nav ul li a {
+  font-size: .9em;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 0 5px 3px; 
+  border-bottom: 2px solid transparent;
+  transition-duration: .3s;
+  transition-property: color, border-bottom;
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid #353F48;
+  color: #353F48;
+}
+
+header nav .cta {margin-left: 30px;}
+
+header nav .cta button:last-child {margin-left: 20px;}
+
+/*ends header*/
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: #ebebeb;
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero .mid {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20vh;  
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero .mid .desc {width: 50%;}
+
+.hero .mid .desc h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero .mid .desc h1 span {
+  font-size: 1.5em;
+  -webkit-text-stroke: 1px tomato;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .mid .desc p {
+  width: 550px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.hero .mid .placeholder {width: 50%;}
+
+/*ends mid*/
+
+.hero .over {
+  width: 40px;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.hero .over a {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.hero .over a i {
+  font-size: 1.5em;
+  color: #353F48;
+  transition: .3s color;
+}
+
+.hero .over a:hover i {
+  color: tomato;
+}
+
+/*ends over*/
+
+.hero .bottom {
+  position: absolute;
+  bottom: 50px;
+  right: 8%;
+}
+
+.hero .bottom .connect a {
+  font-size: .9em;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.hero .bottom .connect a:hover {
+  text-decoration: underline;
+}
+
+/*ends bottom*/
+
+.hamb {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+
+  position: absolute;
+  top: 59px;
+  right: 25px;
+  z-index: 6;
+}
+
+.hamb span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: tomato;
+}
+
+.hamb span.mid {
+  margin: 7px 0px;
+}
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: tomato;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
